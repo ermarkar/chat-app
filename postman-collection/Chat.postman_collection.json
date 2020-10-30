@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "450e488f-4061-4e07-98c2-fc74c7ed313c",
+		"name": "Chat",
+		"description": "Apis for chat app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}/api/user/getUsers?searchText&pageNo&count",
+							"host": [
+								"{{IP}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getUsers"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": null
+								},
+								{
+									"key": "pageNo",
+									"value": null
+								},
+								{
+									"key": "count",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user with id ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}/api/user/getUsers/1?searchText&pageNo&count",
+							"host": [
+								"{{IP}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"getUsers",
+								"1"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": null
+								},
+								{
+									"key": "pageNo",
+									"value": null
+								},
+								{
+									"key": "count",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Apis realted to manage user",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "35140875-ee59-40b3-a3ca-7c3d2f06113c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a76f83e-c31f-44bb-aceb-a59e318b2064",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "friends",
+			"item": [
+				{
+					"name": "Get all frinds",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}/api/user/friends/getFriends?searchText&pageNo&count",
+							"host": [
+								"{{IP}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"friends",
+								"getFriends"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": null
+								},
+								{
+									"key": "pageNo",
+									"value": null
+								},
+								{
+									"key": "count",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Frind with Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}/api/user/friends/getFriends/1?searchText&pageNo&count",
+							"host": [
+								"{{IP}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"friends",
+								"getFriends",
+								"1"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": null
+								},
+								{
+									"key": "pageNo",
+									"value": null
+								},
+								{
+									"key": "count",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get friends of Friends",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{IP}}/api/user/friends/getFriendsOfFriends/1?searchText&pageNo&count",
+							"host": [
+								"{{IP}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"friends",
+								"getFriendsOfFriends",
+								"1"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": null
+								},
+								{
+									"key": "pageNo",
+									"value": null
+								},
+								{
+									"key": "count",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Apis related to Get/Update user friends",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "61a59953-18cb-4b10-82db-316d2d6c14ef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "382413af-2c6c-4119-821f-9ea1f3db9091",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
