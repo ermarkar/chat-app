@@ -1,0 +1,40 @@
+<div class="user-list">
+    <div class="list-section">
+        <div class="section-header">
+            <div class="header-title">Users</div>
+        </div>
+        <div class="section-content">
+            <div class="content-table" *ngIf="!show.loader">
+                <!-- user list -->
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Actions</th>
+                    </tr>
+
+                    <!-- data rows -->
+                    <tr *ngFor="let user of users">
+                        <td>
+                            <img [src]="user.avatarUrl" alt>
+                        </td>
+                        <td>{{user.fullName}}</td>
+                        <td>
+                            <i class="material-icons" title="Show Friends" (click)="showUserFriends(user)">group</i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- laoder -->
+            <div *ngIf="show.loader">
+                Loading...
+            </div>
+
+            <!-- Messages -->
+            <div *ngIf="message">
+                {{message}}
+            </div>
+        </div>
+    </div>
+</div>

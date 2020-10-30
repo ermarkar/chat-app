@@ -1,0 +1,25 @@
+.user-list {
+    height: 100%;
+    width: 100%;
+}
+
+// _variables.scss
+$color-active: #e4f0f5;
+
+// this will be under _common.scss
+table {
+    border-collapse: collapse;
+    width: 100%;
+    tr.active {
+        background-color: $color-active !important;
+    }
+    th,
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+}
