@@ -1,0 +1,43 @@
+{
+  "name": "chatapp",
+  "version": "1.0.0",
+  "description": "Chat App APIs",
+  "main": "./dist/server.js",
+  "scripts": {
+    "clean": "del-cli ./dist/*",
+    "prestart": "yarn clean && tsc && yarn copyfiles",
+    "copyfiles": "copyfiles .env dist",
+    "start": "yarn serve",
+    "serve": "node dist/server.js",
+    "start-dev": "yarn prestart && concurrently \"tsc --watch \" \"nodemon dist/server.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Sunil Garg",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "connect-timeout": "^1.9.0",
+    "copyfiles": "^2.2.0",
+    "del-cli": "^3.0.0",
+    "express": "^4.13.4",
+    "giuseppe": "^3.1.0",
+    "giuseppe-reqres-plugin": "^2.0.0",
+    "http": "0.0.0",
+    "node-env-file": "^0.1.8",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^1.11.0",
+    "tslint": "^6.1.0"
+  }
+}
